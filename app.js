@@ -1,4 +1,4 @@
-const API_URL = https://desafioiv-backend.onrender.com/api/transactions;
+const API_URL = 'https://desafioiv-backend.onrender.com/api/transactions';
 
 const form = document.getElementById('transaction-form');
 const transactionId = document.getElementById('transaction-id');
@@ -63,6 +63,11 @@ async function loadTransactions() {
   try {
     const response = await fetch(API_URL);
     const transactions = await response.json();
+
+    if (!response.ok || !Array.isArray(transactions)) {
+      console.error('Erro retornado pela API:', transactions);
+      throw new Error(transactions.message || 'Erro desconhecido da API');
+    }
 
     updateSummary(transactions);
 
