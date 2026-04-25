@@ -1,4 +1,4 @@
-const API_URL = 'https://desafioiv-backend.onrender.com';
+const API_URL = 'https://desafioiv-backend.onrender.com/api';
 
 const form = document.getElementById('transaction-form');
 const transactionId = document.getElementById('transaction-id');
