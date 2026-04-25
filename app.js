@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/transactions';
+const API_URL = 'https://desafioiv-backend.onrender.com';
 
 const form = document.getElementById('transaction-form');
 const transactionId = document.getElementById('transaction-id');
